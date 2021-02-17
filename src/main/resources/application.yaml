@@ -1,0 +1,20 @@
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+spring:
+  application.name: ${APPLICATION_NAME:spring-security-keycloak}
+keycloak:
+  auth-server-url: http://localhost:8484/auth
+  realm: test_realm
+  resource: login_app
+  public-client: true
+#  bearer-only: true
+
+logging:
+  level:
+    org.springframework.web: ${SPRING_LOG_LEVEL:DEBUG}
+    ru.vtb.community: ${APP_LOG_LEVEL:DEBUG}
+    org.hibernate: ${HIBER_LOG_LEVEL:DEBUG}
