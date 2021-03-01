@@ -1,9 +1,5 @@
 server:
   port: ${SERVER_PORT:8080}
-  servlet:
-    encoding:
-      charset: UTF-8
-      force: true
 spring:
   application.name: ${APPLICATION_NAME:spring-security-keycloak}
 keycloak:
@@ -12,9 +8,3 @@ keycloak:
   resource: login_app
   public-client: true
 #  bearer-only: true
-
-logging:
-  level:
-    org.springframework.web: ${SPRING_LOG_LEVEL:DEBUG}
-    ru.vtb.community: ${APP_LOG_LEVEL:DEBUG}
-    org.hibernate: ${HIBER_LOG_LEVEL:DEBUG}
